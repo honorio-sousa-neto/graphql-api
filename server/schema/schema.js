@@ -1,5 +1,5 @@
 const { addClient, deleteClient, client, clients } = require('./client')
-const { addProject, deleteProject, project, projects } = require('./project')
+const { addProject, deleteProject, updateProject, project, projects } = require('./project')
 const { GraphQLObjectType, GraphQLSchema } = require('graphql')
 
 const query = new GraphQLObjectType({
@@ -18,7 +18,8 @@ const mutation = new GraphQLObjectType({
     addClient,
     deleteClient,
     addProject,
-    deleteProject
+    deleteProject,
+    updateProject
   }
 })
 
